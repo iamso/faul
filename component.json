@@ -1,0 +1,17 @@
+{
+  "name": "faul",
+  "repository": "iamso/faul",
+  "description": "Lazy load images and videos",
+  "version": "0.1.0",
+  "keywords": [
+    "lazy",
+    "load"
+  ],
+  "scripts": [
+    "dist/faul.js",
+    "dist/faul.min.js",
+    "dist/faul.next.js",
+    "dist/faul.next.min.js"
+  ],
+  "license": "MIT"
+}

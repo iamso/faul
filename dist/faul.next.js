@@ -1,5 +1,5 @@
 /*!
- * faul - version 0.1.0
+ * faul - version 0.1.1
  *
  * Made with ❤ by Steve Ottoz so@dev.so
  *
@@ -32,6 +32,7 @@ export default class Faul {
     this.items = [].slice.call(items instanceof NodeList ? items : document.querySelectorAll(items), 0);
   }
   load(e) {
+    let count = 0;
     this.items = this.items.filter((item, i, items) => {
 
       const wTop = window.pageYOffset;
@@ -45,7 +46,7 @@ export default class Faul {
         src = src || item.dataset.src;
 
         if (src) {
-          item.style.transitionDelay = `${ i * this.stagger }ms`;
+          item.style.transitionDelay = `${ count * this.stagger }ms`;
 
           if (this.bg) {
             const img = new Image();
@@ -62,6 +63,7 @@ export default class Faul {
             };
             item.src = src;
           }
+          count++;
         }
       }
       return !visible;

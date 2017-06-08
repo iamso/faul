@@ -1,5 +1,5 @@
 /*!
- * faul - version 0.1.0
+ * faul - version 0.1.1
  *
  * Made with ❤ by Steve Ottoz so@dev.so
  *
@@ -93,6 +93,7 @@
       value: function load(e) {
         var _this = this;
 
+        var count = 0;
         this.items = this.items.filter(function (item, i, items) {
 
           var wTop = window.pageYOffset;
@@ -107,7 +108,7 @@
               src = src || item.dataset.src;
 
               if (src) {
-                item.style.transitionDelay = i * _this.stagger + 'ms';
+                item.style.transitionDelay = count * _this.stagger + 'ms';
 
                 if (_this.bg) {
                   var img = new Image();
@@ -124,6 +125,7 @@
                   };
                   item.src = src;
                 }
+                count++;
               }
             })();
           }

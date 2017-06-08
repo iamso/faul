@@ -2,7 +2,7 @@
   "name": "faul",
   "repository": "iamso/faul",
   "description": "Lazy load images and videos",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "lazy",
     "load"
